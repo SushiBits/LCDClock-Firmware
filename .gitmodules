@@ -4,3 +4,7 @@
 [submodule "platform"]
 	path = platform
 	url = git@github.com:SushiBits/platform-stm32f1.git
+[submodule "contrib/libusb_stm32"]
+	path = contrib/libusb_stm32
+	url = https://github.com/dmitrystu/libusb_stm32.git
+	branch = dev
