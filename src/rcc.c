@@ -9,6 +9,9 @@
 
 void SystemInit(void)
 {
+	// Enable debug features.
+	SCB->SHCSR = SCB_SHCSR_USGFAULTENA_Msk | SCB_SHCSR_BUSFAULTENA_Msk | SCB_SHCSR_MEMFAULTENA_Msk;
+
 	// Turn on HSE oscillator.
 	RCC->CR |= RCC_CR_HSEON;
 	wait(RCC->CR & RCC_CR_HSERDY);
@@ -24,4 +27,18 @@ void SystemInit(void)
 	// Move to PLL clocks
 	RCC->CFGR |= RCC_CFGR_SW_PLL;
 	wait((RCC->CFGR & RCC_CFGR_SWS) == RCC_CFGR_SWS_PLL);
+
+	// Enable RTC oscillator and clocks
+	RCC->APB1ENR |= RCC_APB1ENR_PWREN;
+	PWR->CR |= PWR_CR_DBP;
+
+	if (!(
+			(RCC->BDCR & RCC_BDCR_RTCEN) &&
+			(RCC->BDCR & RCC_BDCR_LSERDY)
+			))
+	{
+		RCC->BDCR = RCC_BDCR_LSEON;
+		wait(RCC->BDCR & RCC_BDCR_LSERDY);
+		RCC->BDCR |= RCC_BDCR_RTCSEL_LSE | RCC_BDCR_RTCEN;
+	}
 }

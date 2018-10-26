@@ -1,0 +1,23 @@
+/*
+ * usart.h
+ *
+ *  Created on: Aug 26, 2017
+ *      Author: technix
+ */
+
+#ifndef SYSTEM_INCLUDE_DREAMOS_RT_USART_H_
+#define SYSTEM_INCLUDE_DREAMOS_RT_USART_H_
+
+#define USART_READ_BUFFER_SIZE		128
+#define USART_WRITE_BUFFER_SIZE		128
+#define USART_DEFAULT_BAUDRATE		115200
+
+// USART ioctl's
+
+enum
+{
+	IOCTL_USART_GET_BAUDRATE,
+	IOCTL_USART_SET_BAUDRATE
+};
+
+#endif /* SYSTEM_INCLUDE_DREAMOS_RT_USART_H_ */

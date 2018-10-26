@@ -83,6 +83,8 @@
                             							
                             <option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.1526596214" name="Enable all common warnings (-Wall)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" useByScannerDiscovery="true" value="true" valueType="boolean"/>
                             							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1245914891" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" value="1287942917" valueType="string"/>
+                            							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.338198566" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
                             							
                             <builder buildPath="${workspace_loc:/LCDClock-v2}/Debug" id="ilg.gnuarmeclipse.managedbuild.cross.builder.829361645" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
@@ -97,6 +99,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/contrib/libusb_stm32/inc}&quot;"/>
                                     									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/system/include}&quot;"/>
+                                    									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/platform/include}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/cmsis/include}&quot;"/>
@@ -107,6 +111,8 @@
                                 								
                                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.700290810" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
                                     									
+                                    <listOptionValue builtIn="false" value="STM32F1"/>
+                                    									
                                     <listOptionValue builtIn="false" value="STM32F103xB"/>
                                     									
                                     <listOptionValue builtIn="false" value="HSE_VALUE=8000000"/>
@@ -114,6 +120,10 @@
                                     <listOptionValue builtIn="false" value="LSE_VALUE=32768"/>
                                     									
                                     <listOptionValue builtIn="false" value="USB_PMASIZE=0x200"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USBD_DP_PORT=GPIOA"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USBD_DP_PIN=8"/>
                                     								
                                 </option>
                                 								
@@ -125,6 +135,8 @@
                                 								
                                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1689123500" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
                                     									
+                                    <listOptionValue builtIn="false" value="STM32F1"/>
+                                    									
                                     <listOptionValue builtIn="false" value="STM32F103xB"/>
                                     									
                                     <listOptionValue builtIn="false" value="HSE_VALUE=8000000"/>
@@ -132,6 +144,10 @@
                                     <listOptionValue builtIn="false" value="LSE_VALUE=32768"/>
                                     									
                                     <listOptionValue builtIn="false" value="USB_PMASIZE=0x200"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USBD_DP_PORT=GPIOA"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USBD_DP_PIN=8"/>
                                     								
                                 </option>
                                 								
@@ -140,6 +156,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/contrib/libusb_stm32/inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/system/include}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/platform/include}&quot;"/>
                                     									
@@ -176,6 +194,10 @@
                                     <listOptionValue builtIn="false" value="arm_cortexM3l_math"/>
                                     								
                                 </option>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano.1545264000" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.printmap.1582605023" name="Print link map (-Xlinker --print-map)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.printmap" useByScannerDiscovery="false" value="false" valueType="boolean"/>
                                 								
                                 <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1995061033" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
                                     									
